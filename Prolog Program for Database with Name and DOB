@@ -1,0 +1,9 @@
+% Name and Date of Birth Database
+
+person(ram, '10-01-2002').
+person(sita, '15-05-2003').
+person(raju, '22-09-2001').
+person(anita, '30-12-2002').
+
+% Query:
+% ?- person(ram, DOB).
