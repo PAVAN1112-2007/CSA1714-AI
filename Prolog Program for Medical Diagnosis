@@ -1,0 +1,12 @@
+% Symptoms and Diseases
+
+disease(fever, flu).
+disease(cough, flu).
+disease(headache, malaria).
+disease(chills, malaria).
+disease(rash, measles).
+
+diagnosis(Symptom) :-
+    disease(Symptom, Disease),
+    write('Possible Disease: '),
+    write(Disease), nl.
