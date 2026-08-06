@@ -1,0 +1,21 @@
+% Graph Representation
+
+edge(a,b).
+edge(a,c).
+edge(b,d).
+edge(b,e).
+edge(c,f).
+edge(e,g).
+
+% Goal Node
+goal(g).
+
+% Best First Search
+
+best_first(Node) :-
+    goal(Node),
+    write('Goal Found: '), write(Node), nl.
+
+best_first(Node) :-
+    edge(Node, Next),
+    best_first(Next).
