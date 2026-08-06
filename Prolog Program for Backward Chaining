@@ -1,0 +1,10 @@
+% Facts
+
+parent(john, paul).
+parent(paul, david).
+
+% Rule
+
+grandparent(X,Y) :-
+    parent(X,Z),
+    parent(Z,Y).
