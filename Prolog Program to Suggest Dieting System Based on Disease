@@ -1,0 +1,7 @@
+% Disease and Diet Database
+
+diet(diabetes, 'Eat low-sugar foods, whole grains, and vegetables.').
+diet(bp, 'Reduce salt intake and eat fruits and vegetables.').
+diet(obesity, 'Eat low-fat, high-fiber foods and exercise regularly.').
+diet(anemia, 'Consume iron-rich foods like spinach and dates.').
+diet(fever, 'Drink plenty of fluids and eat light, nutritious food.').
