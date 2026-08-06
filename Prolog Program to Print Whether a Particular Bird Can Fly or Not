@@ -1,0 +1,14 @@
+% Bird Database
+
+bird(parrot).
+bird(pigeon).
+bird(peacock).
+bird(ostrich).
+bird(penguin).
+
+can_fly(parrot).
+can_fly(pigeon).
+can_fly(peacock).
+
+cannot_fly(ostrich).
+cannot_fly(penguin).
