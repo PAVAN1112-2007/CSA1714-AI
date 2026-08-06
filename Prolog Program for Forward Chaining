@@ -1,0 +1,17 @@
+% Facts
+
+bird(sparrow).
+bird(parrot).
+
+% Rule
+
+can_fly(X) :-
+    bird(X).
+
+print_fly :-
+    can_fly(X),
+    write(X),
+    write(' can fly'),
+    nl,
+    fail.
+print_fly.
