@@ -1,0 +1,46 @@
+from collections import deque
+
+def is_valid(m, c):
+    # Check if missionaries are not outnumbered
+    if (m > 0 and m < c) or (3 - m > 0 and (3 - m) < (3 - c)):
+        return False
+    return 0 <= m <= 3 and 0 <= c <= 3
+
+def missionaries_cannibals():
+    start = (3, 3, 1)   # (Missionaries, Cannibals, Boat: 1=Left, 0=Right)
+    goal = (0, 0, 0)
+
+    queue = deque([(start, [])])
+    visited = set()
+
+    while queue:
+        state, path = queue.popleft()
+
+        if state in visited:
+            continue
+
+        visited.add(state)
+        path = path + [state]
+
+        if state == goal:
+            print("Solution Path:")
+            for step in path:
+                print(step)
+            return
+
+        m, c, boat = state
+
+        moves = [(2,0), (0,2), (1,1), (1,0), (0,1)]
+
+        for dm, dc in moves:
+            if boat == 1:  # Left to Right
+                new_state = (m-dm, c-dc, 0)
+            else:          # Right to Left
+                new_state = (m+dm, c+dc, 1)
+
+            if is_valid(new_state[0], new_state[1]):
+                queue.append((new_state, path))
+
+    print("No Solution Found.")
+
+missionaries_cannibals()
