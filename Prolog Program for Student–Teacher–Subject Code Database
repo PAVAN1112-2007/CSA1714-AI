@@ -1,0 +1,9 @@
+% student(Student, Teacher, SubjectCode)
+
+student(rahul, ramesh, cs101).
+student(priya, suresh, cs102).
+student(akash, ramesh, cs103).
+student(neha, kumar, cs104).
+
+% Query:
+% ?- student(rahul, Teacher, Subject).
